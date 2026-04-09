@@ -1,75 +1,79 @@
-$(document).ready(function(){
-	var stickyNav = function(){
-		var scrollTop = $(window).scrollTop(); 
-	   
-		if (scrollTop > 100) { 
-			$('#top').addClass('on');
-		} else {
-			$('#top').removeClass('on');
-		}
+$(document).ready(() => {
+    // 1. 변하지 않는 요소는 const로 선언
+    const $window = $(window);
+    const $header = $('header');
+    const $topBtn = $('#top');
+    const $footer = $('#footer');
 
-		if ($(window).width() > 768 && scrollTop > 0) {
-			$('#header').addClass('fixed');
-		} else {
-			$('#header').removeClass('fixed');
-		}
-	};
+    // 2. 화살표 함수(Arrow Function) 활용
+    const stickyNav = () => {
+        const scrollTop = $window.scrollTop(); 
+        
+        // 상단 고정 및 Top 버튼 활성화 지점 (100px)
+        const isPastPoint = scrollTop > 100;
+        $topBtn.toggleClass('on', isPastPoint);
+        $header.toggleClass('fixed', isPastPoint);
+    };
 
-		stickyNav();
-			
-	$(window).scroll(function(){
-		stickyNav();
-		var footerHeight = $('#footer').height();
-		var heightFlag = $(document).height() - footerHeight;
-		var scrollValue = $(window).scrollTop() + $(window).height();
+    // 초기 실행
+    stickyNav();
+            
+    // 3. 스크롤 이벤트 최적화
+    $window.on('scroll', () => {
+        stickyNav();
 
-		console.log('heightFlag', heightFlag)
-		console.log('scrollValue', scrollValue)
+        const footerHeight = $footer.height();
+        const heightFlag = $(document).height() - footerHeight;
+        const scrollValue = $window.scrollTop() + $window.height();
 
+        // 템플릿 리터럴을 사용한 디버깅 로그 (필요 시 유지)
+        // console.log(`heightFlag: ${heightFlag}, scrollValue: ${scrollValue}`);
 
-		if( heightFlag <= scrollValue ){
-			$('#top').css({
-			'transform' : 'translateY(-150px)',
-			'background':'#0A519C'
-			})
-		}else{
-			$('#top').removeAttr('style');
-			}
-		});
+        if (heightFlag <= scrollValue) {
+            $topBtn.css({
+                'transform': 'translateY(-150px)',
+                'background': '#0A519C'
+            });
+        } else {
+            $topBtn.removeAttr('style');
+        }
+    });
 
-	$(window).resize(function(){
-		stickyNav();
-	});
+    // 4. 리사이즈 이벤트
+    $window.on('resize', () => {
+        stickyNav();
+    });
 
+    // 5. 상단 이동 클릭 이벤트
+    $topBtn.on('click', (e) => {
+        e.preventDefault();
+        $("html, body").stop().animate({ scrollTop: 0 }, "slow");
+    });
 
-	$("#top").click(function() {
-		$("html, body").animate({ scrollTop: 0 }, "slow");
-		return false;
-	});
+    // 6. Slick Slider 초기화
+    $("#visual .vis_slide").slick({
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        arrows: false,
+        dots: true,
+        fade: true,
+        autoplay: true,
+        autoplaySpeed: 1500
+    });
 
-	$("#visual .vis_slide").slick({
-		slidesToShow: 1,
-		slidesToScroll: 1,
-		arrows: false,
-		dots: true,
-		fade: true,
-		autoplay: true,
-		autoplaySpeed: 1500
-	});
+    // 7. 헤더 메뉴 토글
+    $("header .all_btn").on('click', () => {
+        $(".nav_menu, .bg").toggleClass('on');
+        $("body").toggleClass('fixed');
+    });
 
-	$("#header .all_btn").click(function(){
-		$(".nav_menu").toggleClass('on');
-		$(".bg").toggleClass('on');
-		$("body").toggleClass('fixed');
-	});
-	$(".bg").click(function(){
-		$(".nav_menu").removeClass('on');
-		$(".bg").removeClass('on');
-		$("body").removeClass('fixed');
+    $(".bg").on('click', () => {
+        $(".nav_menu, .bg").removeClass('on');
+        $("body").removeClass('fixed');
+    });
 
-	});
-
-
-
-	AOS.init();
+    // 8. AOS 초기화
+    if (window.AOS) {
+        AOS.init();
+    }
 });
