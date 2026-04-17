@@ -5,11 +5,11 @@
 .brd_content .tit em { display:inline-block; margin-top:80px; font-size:36px; color:var(--color-gray900); line-height:1; font-weight:500; } 
 .brd_content .tit p { margin-top:40px; font-size:18px; color:var(--color-gray900); line-height:1.6; font-weight:300; } 
 .brd_visual { text-align:center; } 
-.brd_visual .img_inner { height:720px; width:100%; position:relative; background:url(/image/brandstory/sub01_vis02.jpg)center no-repeat; } 
+.brd_visual .img_inner { height:720px; width:100%; position:relative; background:url(/image/brandstory/sub01_vis02.jpg)center no-repeat; background-size: 108%;} 
 .brd_visual .tit { position:absolute; top:50%; transform:translateY(-50%); width:100%; } 
 .brd_visual .tit em { font-size: 26px; color: var(--color-gray000); line-height:1; font-family: 'Lato'; font-weight: 500; } 
 .brd_visual .tit h2 { margin-top:5px; font-size: 76px; color: var(--color-gray000); line-height:1; font-family: 'Lato'; font-weight: 700; } 
-.brd_visual .sub_txt { height:60px; background:#1D63AD; width:100%; } 
+.brd_visual .sub_txt { height:60px; background:#1D63AD; width:100%; position: relative;} 
 .brd_visual .sub_txt p { font-size: 20px; color: var(--color-gray000); line-height: 60px; } 
 
 
