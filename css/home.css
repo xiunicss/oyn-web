@@ -155,14 +155,6 @@ background-size:cover; background-position: center; background-repeat: no-repeat
 
 @media screen and (max-width:768px) {#wrap { min-width: 100%; } 
 #header { width:100%; margin:0 auto; } 
-.nav_menu .all_btn { position:absolute; top:25px; right:20px; display:block; width:34px; height:26px; z-index:100; cursor:pointer; } 
-.nav_menu .all_btn span { height:3px; background-color:var(--color-primary900); transition:0.3s all; } 
-.nav_menu .all_btn span:nth-of-type(1) { position:absolute; top:0; left:0; display:block; width:100%; } 
-.nav_menu .all_btn span:nth-of-type(2) { position:absolute; top:11px; left:0; display:block; width:80%; } 
-.nav_menu .all_btn span:nth-of-type(3) { position:absolute; bottom:0; left:0; display:block; width:100%; } 
-.nav_menu.on .all_btn span:nth-of-type(1) { top:10px; transform:rotate(45deg); } 
-.nav_menu.on .all_btn span:nth-of-type(2) { opacity:0 } 
-.nav_menu.on .all_btn span:nth-of-type(3) { top:10px; transform:rotate(-45deg); } 
 
 .vis_slider_wrap { position:relative; } 
 #visual .list_m { min-height: 100%; aspect-ratio: 3.5 / 1; } 
