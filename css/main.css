@@ -9,7 +9,7 @@ br.mo { display:none; }
 .foot h3 { position:absolute; top:0; left:0; } 
 .foot h3 a { display:block; width:200px; } 
 .foot h3 a img { width:100% } 
-.foot address { margin-left:260px; font-size:15px; color:var(--color-gray000); line-height:1.6; font-weight:400; } 
+.foot address { margin-left:260px; font-size:15px; color:var(--color-gray000); line-height:1.4; font-weight:400; } 
 .foot address .br_t { display:none; } 
 .foot address .none_t { display:inline; } 
 
@@ -52,7 +52,7 @@ header .gnb_mo { display:none; }
     .foot address { margin-left:21.6667vw; font-size:1.2500vw; } 
     .foot .copy { margin-top:0.8333vw; font-size:1.0833vw; } 
     .foot .f_sns { top:0; right:0; } 
-    .foot .f_sns span { width:5.2vw; }
+    .foot .f_sns span { width:4.6vw; }
     .foot .f_sns span a i { width:3vw; } 
     .foot .f_sns span a i img { width:100%; } 
     .foot .f_sns span a em { margin-top:0.8333vw; font-size:0.8333vw; } 
@@ -109,7 +109,7 @@ header .gnb_mo { display:none; }
     header .nav_menu .gnb_mo ul li > a { display:block; font-size:18px; color:var(--color-gray700); line-height:1; font-family: 'Lato', sans-serif; font-weight: 500; } 
     header .nav_menu .gnb_mo ul li dl dd { padding-left:30px; position:relative; } 
     header .nav_menu .gnb_mo ul li dl dd + dd { margin-top:20px; } 
-    header .nav_menu .gnb_mo ul li dl dd a { display:block; font-size:18px; color:var(--color-gray700); line-height:1.5; font-family: 'Lato', sans-serif; font-weight: 500; } 
+    header .nav_menu .gnb_mo ul li dl dd a { display:block; font-size:18px; color:var(--color-gray700); line-height:1.4; font-family: 'Lato', sans-serif; font-weight: 500; } 
     header .nav_menu .gnb_mo ul li dl dd a i { position:absolute; top:4px; left:0; display: block; width: 18px; height: 18px; background: url(/image/icon_insta_blue.png)center no-repeat; background-size: cover; } 
 
     .nav_menu .all_btn { position:absolute; top:25px; right:20px; display:block; width:34px; height:26px; z-index:100; cursor:pointer; } 
