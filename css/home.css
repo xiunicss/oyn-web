@@ -6,7 +6,7 @@ overflow: hidden; position: relative; }
 /* height: 34vh; min-height: 250px; max-height: 400px; */
 aspect-ratio: 1920 / 300;
 background-size:cover; background-position: center; background-repeat: no-repeat; position: relative; } 
-#visual .list_m.bg01 { background-image:url(/image/main/o_vis_lemon.jpg); } 
+#visual .list_m.bg01 { background-image:url(/image/main/o_vis_lemon2.jpg); } 
 #visual .list_m.bg02 { background-image:url(/image/main/o_vis_sal.jpg); } 
 #visual .list_m.bg03 { background-image:url(/image/main/o_vis_beef.jpg); } 
 #visual .vis_slide::after { content: ""; position: absolute; top: 0; bottom:0; left: 0; right: 0; width: 100%; background: url(/image/main/o_main_foodstyling+.png)center no-repeat; background-size: 46%; display: block; } 
